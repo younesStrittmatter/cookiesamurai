@@ -1,6 +1,3 @@
-Example for a cookiecutter.json file:
-
-```json
 {
   "question_1": {
     "prompt": "What Powerranger you identify the most (Think of Power Ranger Samurai)?",
@@ -12,4 +9,3 @@ Example for a cookiecutter.json file:
     "depends_on": {"question_1": "blue"}
   }
 }
-```

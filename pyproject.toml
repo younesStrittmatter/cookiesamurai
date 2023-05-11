@@ -1,0 +1,26 @@
+[project]
+# UPDATE THIS BEFORE PUBLISHING
+name = "cookiesamurai"
+description = "A wrapper around cookiesamurai to allow for conditional questions."
+authors = [{ name = "Younes Strittmatter", email = "younes_strittmatter@brown.edu" }]
+dynamic = ["version"]
+
+readme = "README.md"
+license = { text = "MIT License" }
+requires-python = ">=3.8,<4"
+
+# ADD NEW DEPENDENCIES HERE
+dependencies = [
+    "cookiecutter",
+    "requests"
+]
+
+
+[project.urls]
+repository = "https://github.com/younesStrittmatter/cookiesamurai"
+
+[build-system]
+requires = ["setuptools", "setuptools_scm"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
