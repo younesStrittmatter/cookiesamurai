@@ -73,7 +73,7 @@ def main():
         branch = "main"  # Change this to the branch name you want to use
 
         # Construct the URL for the raw cookiecutter.json file
-        url = f"https://raw.githubusercontent.com/{repo_name}/{branch}/cookiecutter.json"
+        url = f"https://raw.githubusercontent.com/{repo_name}/{branch}/cookiesamurai.json"
 
         # Send a request to retrieve the cookiecutter.json file
         response = requests.get(url)
@@ -81,18 +81,18 @@ def main():
             # Load the JSON data from the response
             cookiecutter_json = json.loads(response.text)
         else:
-            print(f"Unable to retrieve cookiecutter.json from {url}")
+            print(f"Unable to retrieve cookiesamurai.json from {url}")
             return
 
     elif os.path.isdir(template):
         # Get the path to the cookiecutter.json file in the local directory
-        cookiecutter_json_path = os.path.join(template, "cookiecutter.json")
+        cookiecutter_json_path = os.path.join(template, "cookiesamurai.json")
         if os.path.exists(cookiecutter_json_path):
             # Load the JSON data from the local file
             with open(cookiecutter_json_path, "r") as f:
                 cookiecutter_json = json.load(f)
         else:
-            print(f"No cookiecutter.json found in {template}")
+            print(f"No cookiesamurai.json found in {template}")
             return
     else:
         print(f"Unrecognized template format: {template}")
